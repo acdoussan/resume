@@ -6,6 +6,7 @@ stages:
 build:
   stage: build
   script:
+    - apt-get install fonts-font-awesome
     - cd examples
     - xelatex resume.tex
   artifacts:
