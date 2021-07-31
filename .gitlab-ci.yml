@@ -6,8 +6,7 @@ stages:
 build:
   stage: build
   script:
-    - cd examples
-    - xelatex resume.tex
+    - make
   artifacts:
     paths:
       - examples/resume.pdf
