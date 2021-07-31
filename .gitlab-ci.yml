@@ -1,0 +1,13 @@
+image: texlive/texlive:latest
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - cd examples
+    - xelatex resume.tex
+  artifacts:
+    paths:
+      - examples/resume.pdf
