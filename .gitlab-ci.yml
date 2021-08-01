@@ -8,7 +8,8 @@ build:
   script:
     - apt-get update -y
     - apt-get install fonts-font-awesome
-    - make
+    - cd examples
+    - xelatex resume.tex
   artifacts:
     paths:
       - examples/resume.pdf
