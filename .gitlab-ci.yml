@@ -1,4 +1,4 @@
-image: thomasweise/texlive
+image: https://gitlab.com/islandoftex/images/texlive:latest
 
 stages:
   - build
@@ -6,6 +6,7 @@ stages:
 build:
   stage: build
   script:
+    - apt-get update -y
     - apt-get install fonts-font-awesome
     - cd examples
     - xelatex resume.tex
