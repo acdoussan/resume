@@ -46,9 +46,9 @@
     {
       \begin{cvitems} % Description(s) of experience/contributions/knowledge
         \item {Dell R210 II running PFSense as my firewall, OS installed on two mirrored SSDs using ZFS, connected to a Dell PowerConnect 7048 switch for VLAN support.}
-        \item {Dell R720 running Proxmox as a hypervisor. TrueNAS core runs in a VM to manage my storage, with the raid controller (flashed to HBA mode) passed directly through via PCIE passthrough. VM storage made available VIA nfs running on TrueNAS.}
-        \item {Highly available Pihole running as both a VM on the R720 and directly on a raspberry pi, kept in sync with Gravity sync. Automatic failover handled by a VIP managed by keepalived. DNS queries handled by unbound, running on the PFSense firewall.}
-        \item {Other services running include HAProxy (load balancer and TLS termination), Suricata (IPS and IDS), Dashy, Home Assistant, Portainer, Plex, and Guacamole.}
+        \item {Dell R720 running Proxmox as a hypervisor. TrueNAS core runs in a VM to manage my storage, with the raid controller (flashed to HBA mode) passed directly through via PCIE passthrough. VM storage made available by NFS running on TrueNAS.}
+        \item {Highly available Pihole running as both a VM on the R720 and directly on a Raspberry pi, kept in sync with Gravity Sync. Automatic failover handled by a VIP managed by keepalived. DNS queries handled by Unbound, running on the PFSense firewall.}
+        \item {Other services include HAProxy (load balancer and TLS termination), Suricata (IPS and IDS), Dashy, Home Assistant, Portainer, Plex, and Guacamole.}
       \end{cvitems}
     }
 
