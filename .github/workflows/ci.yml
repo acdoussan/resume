@@ -1,0 +1,33 @@
+name: CI
+'on':
+  push:
+  schedule:
+    # every sunday at 00:00
+    - cron: "0 0 * * 0"
+
+jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+    container: registry.gitlab.com/islandoftex/images/texlive:latest
+
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v3
+
+      - name: update apt.
+        run: apt-get update -y
+
+      - name: install font awesome.
+        run: apt-get install fonts-font-awesome
+
+      - name: cd examples.
+        run: cd examples
+
+      - name: build resume.
+        run: xelatex resume.tex
+
+      - name: upload resume
+        uses: actions/upload-artifact@v3
+        with:
+          name: Adam_Doussan_resume.pdf
+          path: examples/resume.pdf
