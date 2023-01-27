@@ -21,6 +21,12 @@ jobs:
       - name: install font awesome
         run: apt-get install fonts-font-awesome
 
+      - name: print dir
+        run: pwd
+
+      - name: list dir
+        run: ls -a
+
       - name: cd examples
         run: cd examples
 
