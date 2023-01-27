@@ -30,8 +30,14 @@ jobs:
       - name: cd examples
         run: cd examples
 
+      - name: print dir
+        run: pwd
+
+      - name: list dir
+        run: ls -a
+
       - name: build resume
-        run: xelatex resume.tex
+        run: (cd examples && xelatex resume.tex)
 
       - name: upload resume
         uses: actions/upload-artifact@v3
