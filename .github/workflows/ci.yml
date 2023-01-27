@@ -21,26 +21,11 @@ jobs:
       - name: install font awesome
         run: apt-get install fonts-font-awesome
 
-      - name: print dir
-        run: pwd
-
-      - name: list dir
-        run: ls -a
-
-      - name: cd examples
-        run: cd examples
-
-      - name: print dir
-        run: pwd
-
-      - name: list dir
-        run: ls -a
-
       - name: build resume
-        run: (cd examples && xelatex resume.tex)
+        run: (cd examples && xelatex resume.tex && mv resume.pdf Adam_Doussan_resume.pdf)
 
       - name: upload resume
         uses: actions/upload-artifact@v3
         with:
           name: Adam_Doussan_resume.pdf
-          path: examples/resume.pdf
+          path: examples/Adam_Doussan_resume.pdf
